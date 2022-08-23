@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\c05l0202\Desktop\11022\favicon.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+
+    h1{
+        text-align: center;
+    }
+
+    body{
+        background-image: url(background.jpeg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+       
+    }
+    .opacity{
+        background: rgba(221, 221, 228, 0.644);
+        block-size: 10%;
+        
+    }
+  input[type=text]{
+  
+  padding: 10px 10px;
+  margin: 2px 200px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+input[type=date]{
+  
+  padding: 12px 10px;
+  margin: 2px 200px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+input[type=radio]{
+
+margin: 16px 200px;
+  
+}
+
+label{
+    margin: 2px 200px;
+}
+label1{
+    margin: 2px -200px;
+}
+
+
+
+
+input[type=submit]{
+
+margin: 2px 600px;
+  
+}
+
+</style>
+
+<script>
+    function validate(){
+
+if(document.studentform.firstname.value == ""){
+    alert("Please Enter First Name");
+    studentform.firstname.focus();
+    return false;
+}
+if(document.studentform.lastname.value == ""){
+    alert("Please Enter Last Name");
+    studentform.lastname.focus();
+    return false;
+}
+
+if(document.studentform.email.value == ""){
+    alert("Please Enter email");
+    studentform.email.focus();
+    return false;
+}
+
+if(document.studentform.birthday.value== false)
+{
+    alert("Please Enter birthday");
+    studentform.birthday.focus();
+    return false;
+
+}
+
+
+if(document.studentform.phonenumber.value == ""){
+    alert("Please Enter Mobile Number");
+    studentform.phonenumber.focus();
+    return false;
+}
+
+
+
+if(document.studentform.gender.value == false ){
+    alert("Please Select Gender");
+    
+    return false;
+}
+}
+</script>
+
+
+
+<body>  
+    
+    <form name="studentform" onsubmit="return validate()" action="success.php">
+    
+    <div class="opacity">
+
+        <h1>Registration Form</h1>
+
+    <label>First Name</label><br>
+    <input name="firstname" type="text" placeholder="Enter Your First Name"><br>
+    <label>Last Name</label><br>
+    <input name="lastname" type="text" placeholder="Enter Your Last Name"><br><br>
+    
+    
+    <label>Email</label><br>
+    <div class="input1">
+    <input name="email" type="text" placeholder="Enter Your Email" size="50%"><br><br>
+
+
+    <label>Birthday</label><br> 
+    <input name="birthday" type="date" placeholder="Enter Your Birthday"><br><br>
+    <label>Phone Number</label><br>
+    <input name="phonenumber" type="text" placeholder="Enter Your Phone Number" minlength="10" maxlength="10"><br><br>
+
+
+
+    <label>Gender</label><br>
+    <input  type="radio" name="gender">
+    <label1>Male</label><br>
+    <input  type="radio" name="gender"  >
+    <label1>Female</label><br>
+    <input  type="radio"  name="gender" >
+    <label1>Other</label>
+
+    </div>
+    
+    <input name="submit" type="submit" value="Register" >
+
+</div>
+</div>
+</form>
+
+
+<table id="students">
+    <tr>
+        <th>Sr No.</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Mobile Number</th>
+        <th>Occupation</th>
+        <th>Address</th>
+    </tr>
+
+    <tr>
+        <th>1</th>
+        <th>Gautam</th>
+        <th>20</th>
+        <th>7894561230</th>
+        <th>Student</th>
+        <th>Kothrud</th>
+    </tr>
+
+    <tr>
+        <th>2</th>
+        <th>Tanmay</th>
+        <th>20</th>
+        <th>7899561230</th>
+        <th>Student</th>
+        <th>Sanghvi</th>
+    </tr>
+
+    <tr>
+        <th>3</th>
+        <th>Shardul</th>
+        <th>20</th>
+        <th>7899545230</th>
+        <th>Student</th>
+        <th>Bhugaon</th>
+    </tr>
+</table>
+
+</body>
+</html>
